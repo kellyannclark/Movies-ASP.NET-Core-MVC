@@ -1,0 +1,87 @@
+:root {
+    --primary-color: #d6336c; /* Vibrant Pink as primary color */
+    --secondary-color: white; /* Rich Green as secondary color */
+    --background-color: #e9ecef; /* Soft Gray for backgrounds */
+    --text-color: #343a40; /* Darker gray for text, ensuring good readability */
+    --hover-primary: #bd5e6b; /* Darkened pink for primary hover effects */
+    --hover-secondary: #146c43; /* Darkened green for secondary hover effects */
+}
+
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: var(--background-color); /* Existing background color, you might want to remove or keep based on your needs */
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Add the following properties for the background image */
+    background-image: url('/images/background.png');
+    background-size: cover; /* Cover ensures the background covers the entire body, you might adjust as needed */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+    .btn-primary:hover {
+        background-color: var(--hover-primary); /* Using variable for hover state */
+        border-color: var(--hover-primary);
+    }
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.2rem rgba(214, 51, 108, 0.5), 0 0 0 0.4rem rgba(25, 135, 84, 0.5); /* More intense focus shadow with primary and secondary colors */
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(214, 51, 108, 0.25); /* Adjusted focus shadow for form controls */
+}
+
+/* New class for images in the details view */
+.img-detail {
+    max-width: 100%; /* Adjust as needed */
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Center the image with margin */
+}
+
+a, .btn-link {
+    color: var(--primary-color);
+}
+
+    a:hover, .btn-link:hover {
+        color: var(--hover-primary); /* Using variable for hover state */
+    }
+
+.navbar, .footer {
+    background-color: var(--secondary-color);
+    color: white; /* Light text on dark navbar/footer */
+}
+
+    .navbar a, .footer a {
+        color: white; /* Ensuring links in navbar/footer are also light for contrast */
+    }
+
+        .navbar a:hover, .footer a:hover {
+            color: var(--hover-secondary); /* Hover state for links in navbar/footer */
+        }
+.footer {
+    background-color: var(--secondary-color);
+    color: white; /* Light text on dark navbar/footer */
+    padding: 20px 0; /* Add padding inside the footer, adjust values as needed */
+    margin-top: 40px; /* Creates space between content and footer, adjust value as needed */
+}
